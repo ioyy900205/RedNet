@@ -302,3 +302,9 @@ class TransBasicBlock(nn.Module):
         out = self.relu(out)
 
         return out
+
+if __name__ == '__main__':
+    imgs = torch.randn(1,3,480,640)
+    depth = torch.randn(1,1,480,640)
+    net = RedNet()
+    _1,_2,_3,_4,_5 = net(imgs,depth)
